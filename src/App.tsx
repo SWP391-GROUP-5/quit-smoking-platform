@@ -6,6 +6,8 @@ import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
 import QuitPlan from './pages/QuitPlan'
 import Feedback from './pages/Feedback'
+import Login from './pages/Login'
+import Register from './pages/Register'
 import './App.css'
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/plan" element={<QuitPlan />} />
             <Route path="/feedback" element={<Feedback />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Register />} />
             {/* Additional routes would be added here */}
           </Routes>
         </main>
