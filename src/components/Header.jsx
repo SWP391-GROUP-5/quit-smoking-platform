@@ -3,7 +3,7 @@ import '../styles/Header.css';
 import LoginButton from './LoginButton';
 import SignupButton from './SignupButton';
 
-const Header: React.FC = () => {
+const Header = () => {
   return (
     <header className="header">
       <div className="container">
@@ -21,6 +21,7 @@ const Header: React.FC = () => {
               <li><a href="/community">Cộng Đồng</a></li>
               <li><a href="/blog">Bài Viết</a></li>
               <li><a href="/feedback">Đánh Giá</a></li>
+              <li><a href="/profile">Tài Khoản</a></li>
             </ul>
           </nav>
         </div>

@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import '../styles/Feedback.css';
 
-const Feedback: React.FC = () => {
+const Feedback = () => {
   // State cho form đánh giá
-  const [rating, setRating] = useState<number>(0);
-  const [hoverRating, setHoverRating] = useState<number>(0);
-  const [comment, setComment] = useState<string>('');
-  const [name, setName] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [category, setCategory] = useState<string>('app');
-  const [submitted, setSubmitted] = useState<boolean>(false);
-  const [validationError, setValidationError] = useState<string>('');
+  const [rating, setRating] = useState(0);
+  const [hoverRating, setHoverRating] = useState(0);
+  const [comment, setComment] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [category, setCategory] = useState('app');
+  const [submitted, setSubmitted] = useState(false);
+  const [validationError, setValidationError] = useState('');
 
   // Danh sách đánh giá mẫu
   const sampleFeedbacks = [
@@ -41,7 +41,7 @@ const Feedback: React.FC = () => {
   ];
 
   // Xử lý gửi đánh giá
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
     // Kiểm tra xác thực đơn giản
@@ -77,7 +77,7 @@ const Feedback: React.FC = () => {
   };
 
   // Hiển thị sao đánh giá
-  const renderStars = (count: number, isStatic: boolean = false) => {
+  const renderStars = (count, isStatic = false) => {
     return Array(5).fill(0).map((_, index) => (
       <span 
         key={index}

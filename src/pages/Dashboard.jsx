@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Dashboard.css';
 
-const Dashboard: React.FC = () => {
+const Dashboard = () => {
   // Mock data - would be fetched from API in a real app
   const userData = {
     name: 'Nguyễn Văn A',
@@ -32,8 +32,8 @@ const Dashboard: React.FC = () => {
   };
 
   // Format date
-  const formatDate = (dateString: string) => {
-    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+  const formatDate = (dateString) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString('vi-VN', options);
   };
 

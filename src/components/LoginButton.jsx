@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const LoginButton: React.FC = () => {
+const LoginButton = () => {
   const navigate = useNavigate();
 
   const handleLoginClick = () => {

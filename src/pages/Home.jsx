@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Home.css';
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <div className="home-page">
       {/* Hero Section */}
