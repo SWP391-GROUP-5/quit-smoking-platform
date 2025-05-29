@@ -4,6 +4,13 @@ import LoginButton from './LoginButton';
 import SignupButton from './SignupButton';
 
 const Header: React.FC = () => {
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+  const handleLogout = () => {
+    localStorage.removeItem('isLoggedIn');
+    window.location.href = '/';
+  };
+
   return (
     <header className="header">
       <div className="container">
@@ -21,16 +28,20 @@ const Header: React.FC = () => {
               <li><a href="/community">Cộng Đồng</a></li>
               <li><a href="/blog">Bài Viết</a></li>
               <li><a href="/feedback">Đánh Giá</a></li>
+              {isLoggedIn ? (
+                <li><button onClick={handleLogout} className="login-btn">Đăng Xuất</button></li>
+              ) : (
+                <>
+                  <li style={{marginRight: '10px'}}><LoginButton /></li>
+                  <li><SignupButton /></li>
+                </>
+              )}
             </ul>
           </nav>
-        </div>
-        <div className="auth-buttons">
-          <LoginButton />
-          <SignupButton />
         </div>
       </div>
     </header>
   );
 };
 
-export default Header; 
+export default Header;
