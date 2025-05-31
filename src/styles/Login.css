@@ -1,0 +1,67 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 160px); /* Trừ đi chiều cao của navbar và footer */
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.login-form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.login-form h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.register-link a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Custom styles for Ant Design components */
+.ant-form-item-label > label {
+  color: #2c3e50;
+}
+
+.ant-input,
+.ant-input-password {
+  border-radius: 4px;
+}
+
+.ant-btn-primary {
+  background-color: #3498db;
+  border-color: #3498db;
+  width: 100%;
+}
+
+.ant-btn-primary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.ant-checkbox-wrapper {
+  color: #2c3e50;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #3498db;
+  border-color: #3498db;
+} 
