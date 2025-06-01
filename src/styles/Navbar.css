@@ -28,6 +28,19 @@
   align-items: center;
 }
 
+.navbar-logo img {
+  height: 48px;         /* Chiều cao logo */
+  width: auto;          /* Tự động theo tỉ lệ */
+  border-radius: 50%;   /* Bo tròn logo */
+  object-fit: cover;    /* Cắt ảnh vừa khung */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Đổ bóng nhẹ */
+  transition: transform 0.2s;
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.08); /* Phóng to nhẹ khi hover */
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -106,4 +119,4 @@
   .nav-buttons {
     display: none;
   }
-} 
+}
