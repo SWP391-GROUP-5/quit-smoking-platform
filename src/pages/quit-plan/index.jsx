@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/QuitPlan.css';
+import '../../styles/QuitPlan.css';
 
 const QuitPlan = () => {
   // State for the multi-step form

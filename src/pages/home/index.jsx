@@ -1,7 +1,48 @@
-import React from 'react';
-import '../styles/Home.css';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../../styles/Home.css";
+
+const blogPosts = [
+  {
+    id: 1,
+    title: 'Cách vượt qua cơn thèm thuốc hiệu quả',
+    excerpt: 'Tìm hiểu các phương pháp thực tế giúp bạn kiểm soát cơn thèm thuốc mỗi ngày.',
+    image: '/imagedep/anhblogmot.png',
+  },
+  {
+    id: 2,
+    title: 'Những lợi ích sức khỏe khi bỏ thuốc lá',
+    excerpt: 'Khám phá những thay đổi tích cực cho sức khỏe sau khi bạn ngừng hút thuốc.',
+    image: '/imagedep/anhblog2.jpg',
+  },
+];
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const images = [
+    '/imagedep/anhhome1.jpg',
+    '/imagedep/anhhome2.jpg',
+    '/imagedep/anhhome3.jpg',
+    '/imagedep/anhhome4.jpg',
+  ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    cssEase: "linear",
+    fade: true,
+    arrows: false,
+  };
+
   return (
     <div className="home-page">
       {/* Hero Section */}
@@ -11,13 +52,36 @@ const Home = () => {
             <h1>Làm Chủ Cuộc Sống. Bỏ Thuốc Lá Ngay Hôm Nay.</h1>
             <p>Tham gia cùng hàng nghìn người đã bỏ thuốc thành công với kế hoạch cá nhân hóa, cộng đồng hỗ trợ và các kỹ thuật đã được chứng minh.</p>
             <div className="cta-buttons">
-              <button className="primary-btn">Bắt Đầu Hành Trình</button>
+              <button
+                className="primary-btn"
+                onClick={() => navigate('/login')}
+              >
+                Bắt Đầu Hành Trình
+              </button>
               <button className="secondary-btn">Tìm Hiểu Thêm</button>
             </div>
           </div>
           <div className="hero-image">
-            {/* Placeholder for hero image */}
-            <div className="image-placeholder"></div>
+            <Slider {...settings}>
+              {images.map((image, index) => (
+                <div key={index} className="carousel-image-container">
+                  <img
+                    src={image}
+                    alt={`Minh họa sức khỏe ${index + 1}`}
+                    style={{
+                      // Move most styles to CSS class
+                      // width: '100%',
+                      // maxWidth: 520,
+                      // borderRadius: 16,
+                      // boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
+                      // objectFit: 'cover',
+                      // background: '#e0e0e0',
+                      // margin: '0 auto'
+                    }}
+                  />
+                </div>
+              ))}
+            </Slider>
           </div>
         </div>
       </section>
@@ -95,38 +159,34 @@ const Home = () => {
       </section>
 
       {/* Blog Preview Section */}
+      {/* 
       <section className="blog-preview">
         <div className="container">
           <h2 className="section-title">Bài Viết Mới Nhất</h2>
           <div className="blog-grid">
-            <div className="blog-card">
-              <div className="blog-image">
-                {/* Placeholder for blog image */}
-                <div className="image-placeholder"></div>
+            {blogPosts.slice(0, 2).map((post) => (
+              <div className="blog-card" key={post.id}>
+                <div className="blog-image">
+                  <img src={post.image} alt={post.title} />
+                </div>
+                <div className="blog-content">
+                  <h3>{post.title}</h3>
+                  <p>{post.excerpt}</p>
+                  <Link to={`/blog/${post.id}`} className="read-more">
+                    Đọc Thêm
+                  </Link>
+                </div>
               </div>
-              <div className="blog-content">
-                <h3>10 Mẹo Hàng Đầu Để Chống Lại Cơn Thèm Thuốc</h3>
-                <p>Chiến lược thực tế giúp bạn vượt qua cơn thèm thuốc...</p>
-                <a href="/blog/tips" className="read-more">Đọc Thêm</a>
-              </div>
-            </div>
-            <div className="blog-card">
-              <div className="blog-image">
-                {/* Placeholder for blog image */}
-                <div className="image-placeholder"></div>
-              </div>
-              <div className="blog-content">
-                <h3>Lợi Ích Sức Khỏe Khi Bỏ Thuốc Lá</h3>
-                <p>Điều gì xảy ra với cơ thể bạn sau 1 ngày, 1 tuần, 1 tháng...</p>
-                <a href="/blog/health-benefits" className="read-more">Đọc Thêm</a>
-              </div>
-            </div>
+            ))}
           </div>
-          <div className="view-all-container">
-            <a href="/blog" className="view-all">Xem Tất Cả Bài Viết</a>
+          <div style={{ textAlign: 'center', marginTop: 24 }}>
+            <Link to="/blog" className="read-more" style={{ fontSize: 18 }}>
+              Xem Tất Cả Bài Viết
+            </Link>
           </div>
         </div>
       </section>
+      */}
 
       {/* CTA Section */}
       <section className="cta-section">
@@ -140,4 +200,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default Home;

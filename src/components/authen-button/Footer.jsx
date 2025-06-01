@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Footer.css';
+import '../../styles/Footer.css';
 
 const Footer = () => {
   return (
@@ -29,8 +29,16 @@ const Footer = () => {
           <div className="footer-section contact-form">
             <h2>Liên Hệ</h2>
             <form>
-              <input type="email" placeholder="Địa chỉ email của bạn..." />
-              <textarea placeholder="Nội dung tin nhắn..."></textarea>
+              <label htmlFor="footer-email" style={{ color: "#fff", fontWeight: 500, marginBottom: 6, display: "block" }}>
+                Địa chỉ email của bạn
+              </label>
+              <input id="footer-email" type="email" placeholder="Nhập email..." />
+
+              <label htmlFor="footer-message" style={{ color: "#fff", fontWeight: 500, marginBottom: 6, marginTop: 12, display: "block" }}>
+                Bạn cần hỗ trợ gì?
+              </label>
+              <textarea id="footer-message" placeholder="Nội dung tin nhắn..."></textarea>
+
               <button type="submit" className="btn-send">Gửi</button>
             </form>
           </div>
@@ -44,4 +52,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;

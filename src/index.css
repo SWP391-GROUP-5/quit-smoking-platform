@@ -1,12 +1,15 @@
+@import "tailwindcss";
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color: #213547;
+  background: linear-gradient(135deg, #b0b0b0 0%, #757575 100%);
+  /* Gradient xám đậm hơn cho toàn bộ trang */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -24,10 +27,11 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: none; /* Để inherit từ :root */
+  display: flex;
+  place-items: center;
 }
 
 h1 {
@@ -57,7 +61,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #bdbdbd; /* xám đậm hơn */
   }
   a:hover {
     color: #747bff;

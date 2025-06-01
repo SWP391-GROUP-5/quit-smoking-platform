@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Feedback.css';
+import '../../styles/Feedback.css';
 
 const Feedback = () => {
   // State cho form đánh giá

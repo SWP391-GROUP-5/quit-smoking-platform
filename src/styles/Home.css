@@ -4,9 +4,10 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1200px;    /* hoặc 1280px, 1400px tùy ý */
   margin: 0 auto;
-  padding: 0 20px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .section-title {
@@ -88,6 +89,31 @@
 
 .hero-image {
   flex: 1;
+  /* Allow flex item to shrink */
+  min-width: 0;
+}
+
+/* Style for react-slick slider container */
+.hero-image .slick-slider {
+  width: 100%; /* Ensure slider takes full width of its container */
+}
+
+/* Container for each image in the carousel */
+.hero-image .carousel-image-container {
+  height: 400px; /* Set a fixed height for the image container */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center image vertically if needed */
+}
+
+/* Style for individual images within the carousel container */
+.hero-image .carousel-image-container img {
+  width: 100%; /* Make image take full width of its container */
+  height: 100%; /* Make image take full height of its container */
+  object-fit: cover; /* Crop image to cover the container while maintaining aspect ratio */
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  background: #e0e0e0;
 }
 
 .image-placeholder {
@@ -286,4 +312,4 @@
   .image-placeholder {
     height: 300px;
   }
-} 
+}

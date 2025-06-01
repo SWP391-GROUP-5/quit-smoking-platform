@@ -123,10 +123,24 @@
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
+  border: 2px solid #43a047;      /* Viền xanh lá nổi bật */
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  margin-top: 6px;
+  background: #f1f8e9;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(67, 160, 71, 0.08); /* Đổ bóng nhẹ */
+}
+
+.form-group input[type="number"]:focus,
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #388e3c;           /* Đậm hơn khi focus */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(67, 160, 71, 0.15);
 }
 
 .form-group textarea {
@@ -400,4 +414,4 @@
   .reasons-grid {
     grid-template-columns: 1fr;
   }
-} 
+}

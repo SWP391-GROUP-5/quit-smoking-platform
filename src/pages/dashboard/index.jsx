@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Dashboard.css';
+import '../../styles/Dashboard.css';
 
 const Dashboard = () => {
   // Mock data - would be fetched from API in a real app
@@ -107,30 +107,47 @@ const Dashboard = () => {
 
           <div className="dashboard-section">
             <h2>Nhật Ký Hút Thuốc</h2>
-            <div className="smoking-log">
-              <h3>Ghi Nhận Tình Trạng Hôm Nay</h3>
-              <form className="smoking-form">
-                <div className="form-group">
-                  <label>Bạn có hút thuốc hôm nay không?</label>
-                  <div className="radio-group">
-                    <label>
-                      <input type="radio" name="smokedToday" value="no" defaultChecked /> Không
-                    </label>
-                    <label>
-                      <input type="radio" name="smokedToday" value="yes" /> Có
-                    </label>
+            <div className="smoking-log" style={{ display: 'flex', gap: 32, alignItems: 'flex-start' }}>
+              <div style={{ flex: 1 }}>
+                <h3>Ghi Nhận Tình Trạng Hôm Nay</h3>
+                <form className="smoking-form">
+                  <div className="form-group">
+                    <label>Bạn có hút thuốc hôm nay không?</label>
+                    <div className="radio-group">
+                      <label>
+                        <input type="radio" name="smokedToday" value="no" defaultChecked /> Không
+                      </label>
+                      <label>
+                        <input type="radio" name="smokedToday" value="yes" /> Có
+                      </label>
+                    </div>
                   </div>
-                </div>
-                <div className="form-group">
-                  <label>Số điếu thuốc? (nếu có)</label>
-                  <input type="number" min="0" placeholder="0" />
-                </div>
-                <div className="form-group">
-                  <label>Yếu tố kích thích hoặc ghi chú?</label>
-                  <textarea placeholder="Điều gì gây ra cơn thèm? Bạn cảm thấy thế nào?"></textarea>
-                </div>
-                <button type="submit" className="primary-btn">Lưu Ghi Nhận</button>
-              </form>
+                  <div className="form-group">
+                    <label>Số điếu thuốc? (nếu có)</label>
+                    <input type="number" min="0" placeholder="0" />
+                  </div>
+                  <div className="form-group">
+                    <label>Yếu tố kích thích hoặc ghi chú?</label>
+                    <textarea placeholder="Điều gì gây ra cơn thèm? Bạn cảm thấy thế nào?"></textarea>
+                  </div>
+                  <button type="submit" className="primary-btn">Lưu Ghi Nhận</button>
+                </form>
+              </div>
+              <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+                <img
+                  src="\imagedep\anh lich cai thuoc.jpg"
+                  alt="Minh họa sức khỏe"
+                  style={{
+                    maxWidth: 260,
+                    width: '300%',
+                    maxWidth: 520,
+                    borderRadius: 16,
+                    boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
+                    objectFit: 'cover',
+                    background: '#e0e0e0'
+                  }}
+                />
+              </div>
             </div>
           </div>
 
@@ -160,4 +177,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard; 
+export default Dashboard;

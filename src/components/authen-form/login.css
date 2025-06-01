@@ -1,0 +1,33 @@
+.login-form {
+  /* Add styles for the login form container */
+}
+
+.login-form h2 {
+  /* Add styles for the heading */
+}
+
+.login-form .form-group {
+  /* Add styles for form groups (label + input) */
+  margin-bottom: 15px;
+}
+
+.login-form label {
+  /* Add styles for labels */
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-form input[type="email"], .login-form input[type="password"] {
+  /* Add styles for input fields */
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form button {
+  /* Add styles for the submit button (inherits from primary-btn in App.css) */
+  width: 100%;
+  padding: 10px;
+} 

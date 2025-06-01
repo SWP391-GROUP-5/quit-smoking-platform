@@ -9,23 +9,29 @@ body {
   font-family: 'Inter', 'Roboto', sans-serif;
   line-height: 1.5;
   color: #333;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
 }
 
 .main-content {
   flex: 1;
+  width: 100%;
+  padding: 0 2rem;
 }
 
 /* Common utility classes */
 .container {
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2rem;
 }
 
 button {
@@ -66,9 +72,9 @@ button {
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 

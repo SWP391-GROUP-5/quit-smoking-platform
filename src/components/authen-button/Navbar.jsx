@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Navbar.css';
+import '../../styles/Navbar.css';
 
 const Navbar = () => {
   return (
@@ -13,37 +13,42 @@ const Navbar = () => {
         <ul className="nav-menu">
           <li className="nav-item">
             <Link to="/" className="nav-link">
-              Trang chủ
+              Trang Chủ
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/dashboard" className="nav-link">
-              Bảng điều khiển
+              Trang Tổng Quan 
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/quit-plan" className="nav-link">
-              Kế hoạch cai thuốc
+              Kế Hoạch Cai Thuốc
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/profile" className="nav-link">
-              Hồ sơ
+              Hồ Sơ
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/feedback" className="nav-link">
-              Phản hồi
+              Phản Hồi
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/blog" className="nav-link">
+              Blog
             </Link>
           </li>
         </ul>
 
         <div className="nav-buttons">
           <Link to="/login" className="nav-button login-button">
-            Đăng nhập
+            Đăng Nhập
           </Link>
           <Link to="/register" className="nav-button register-button">
-            Đăng ký
+            Đăng Ký
           </Link>
         </div>
       </div>
@@ -51,4 +56,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;

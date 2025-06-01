@@ -1,0 +1,30 @@
+.authen-template {
+  display: flex;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.authen-template__form {
+  flex: 1; /* Takes up available space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.authen-template__image {
+  flex: 1; /* Takes up available space */
+  background-color: #f0f0f0; /* Placeholder background */
+  /* Add background image or other styling as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .authen-template {
+    flex-direction: column;
+  }
+
+  .authen-template__image {
+    /* Adjust styles for smaller screens if needed */
+    min-height: 200px; /* Give image area some height on small screens */
+  }
+} 

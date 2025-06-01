@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Header.css';
 import LoginButton from './LoginButton';
-import SignupButton from './SignupButton';
+import RegisterButton from './RegisterButton';
 
 const Header = () => {
   return (
@@ -27,7 +27,7 @@ const Header = () => {
         </div>
         <div className="auth-buttons">
           <LoginButton />
-          <SignupButton />
+          <RegisterButton />
         </div>
       </div>
     </header>

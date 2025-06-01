@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/Profile.css';
+import '../../styles/Profile.css';
 
 const Profile = () => {
   const [profile, setProfile] = useState({
@@ -9,6 +9,7 @@ const Profile = () => {
     dateOfBirth: '',
     gender: '',
     address: '',
+    cccd: '',
     smokingStatus: '',
     yearsOfSmoking: 0,
     cigarettesPerDay: 0
@@ -27,6 +28,7 @@ const Profile = () => {
       dateOfBirth: '1990-01-01',
       gender: 'male',
       address: 'Hà Nội, Việt Nam',
+      cccd: '123456789012',
       smokingStatus: 'active',
       yearsOfSmoking: 5,
       cigarettesPerDay: 20
@@ -123,6 +125,17 @@ const Profile = () => {
             type="text"
             name="address"
             value={profile.address}
+            onChange={handleInputChange}
+            disabled={!isEditing}
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Căn Cước Công Dân:</label>
+          <input
+            type="text"
+            name="cccd"
+            value={profile.cccd}
             onChange={handleInputChange}
             disabled={!isEditing}
           />

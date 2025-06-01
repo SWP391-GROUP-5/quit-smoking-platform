@@ -1,21 +1,31 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import Dashboard from './pages/Dashboard'
-import QuitPlan from './pages/QuitPlan'
-import Profile from './pages/Profile'
-import Feedback from './pages/Feedback'
-import Login from './pages/Login'
-import Register from './pages/Register'
+import React, { useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import Navbar from './components/authen-button/Navbar'
+import Footer from './components/authen-button/Footer'
+import Home from './pages/home'
+import Dashboard from './pages/dashboard'
+import QuitPlan from './pages/quit-plan'
+import Profile from './pages/profile'
+import Feedback from './pages/feedback'
+import Login from './pages/login'
+import Register from './pages/register'
+import Blog from './pages/blog'
 import './App.css'
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Navbar />
+        <ScrollToTop />
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -25,6 +35,7 @@ function App() {
             <Route path="/feedback" element={<Feedback />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/blog" element={<Blog />} />
             {/* Additional routes would be added here */}
           </Routes>
         </main>
@@ -34,4 +45,4 @@ function App() {
   )
 }
 
-export default App 
+export default App
