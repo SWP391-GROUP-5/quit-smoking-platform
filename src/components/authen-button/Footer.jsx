@@ -1,5 +1,7 @@
 import React from 'react';
 import '../../styles/Footer.css';
+import { Form, Input, Button } from "antd";
+import { MailOutlined, MessageOutlined } from '@ant-design/icons';
 
 const Footer = () => {
   return (
@@ -28,19 +30,31 @@ const Footer = () => {
 
           <div className="footer-section contact-form">
             <h2>Liên Hệ</h2>
-            <form>
-              <label htmlFor="footer-email" style={{ color: "#fff", fontWeight: 500, marginBottom: 6, display: "block" }}>
-                Địa chỉ email của bạn
-              </label>
-              <input id="footer-email" type="email" placeholder="Nhập email..." />
+            <Form
+              name="footer_contact"
+              layout="vertical"
+              onFinish={(values) => console.log('Received values of form: ', values)}
+            >
+              <Form.Item
+                name="email"
+                rules={[{ type: 'email', message: 'Email không hợp lệ!' }, { required: true, message: 'Vui lòng nhập email của bạn!' }]}
+              >
+                <Input prefix={<MailOutlined />} placeholder="Nhập email..." />
+              </Form.Item>
 
-              <label htmlFor="footer-message" style={{ color: "#fff", fontWeight: 500, marginBottom: 6, marginTop: 12, display: "block" }}>
-                Bạn cần hỗ trợ gì?
-              </label>
-              <textarea id="footer-message" placeholder="Nội dung tin nhắn..."></textarea>
+              <Form.Item
+                name="message"
+                rules={[{ required: true, message: 'Vui lòng nhập nội dung tin nhắn!' }]}
+              >
+                <Input.TextArea prefix={<MessageOutlined />} placeholder="Nội dung tin nhắn..." rows={2} />
+              </Form.Item>
 
-              <button type="submit" className="btn-send">Gửi</button>
-            </form>
+              <Form.Item>
+                <Button type="primary" htmlType="submit" className="btn-send" block>
+                  Gửi
+                </Button>
+              </Form.Item>
+            </Form>
           </div>
         </div>
 

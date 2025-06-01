@@ -1,33 +1,34 @@
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: gray;
+  margin-bottom: 0px;
+  text-align: center;
+}
 .register-form {
-  /* Add styles for the register form container */
-}
-
-.register-form h2 {
-  /* Add styles for the heading */
-}
-
-.register-form .form-group {
-  /* Add styles for form groups */
-  margin-bottom: 15px;
-}
-
-.register-form label {
-  /* Add styles for labels */
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.register-form input[type="text"], .register-form input[type="email"], .register-form input[type="password"] {
-  /* Add styles for input fields */
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.register-form button {
-  /* Add styles for the submit button (inherits from primary-btn in App.css) */
-  width: 100%;
-  padding: 10px;
-} 
+.checkbox-group label {
+  margin-bottom: 0;
+}
+
+.align-left-item .ant-form-item-control-input-content {
+  text-align: left;
+}
+
+.align-left-item.ant-form-item .ant-form-item-control {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.register-title {
+  text-align: center;
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}

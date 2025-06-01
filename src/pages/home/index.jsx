@@ -25,7 +25,7 @@ const Home = () => {
 
   const images = [
     '/imagedep/anhhome1.jpg',
-    '/imagedep/anhhome2.jpg',
+    '/imagedep/home2.jpg',
     '/imagedep/anhhome3.jpg',
     '/imagedep/anhhome4.jpg',
   ];
@@ -118,7 +118,7 @@ const Home = () => {
       {/* Testimonials Section */}
       <section className="testimonials">
         <div className="container">
-          <h2 className="section-title">Câu Chuyện Thành Công</h2>
+          <h2 className="cau_chuyen">Câu Chuyện Thành Công</h2>
           <div className="testimonials-slider">
             <div className="testimonial-card">
               <div className="testimonial-content">
