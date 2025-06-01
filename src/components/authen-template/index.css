@@ -1,30 +1,83 @@
-.authen-template {
+/* TRANG ĐĂNG NHẬP CHO MÀN HÌNH MÁY TÍNH */
+.authen-template-desktop {
   display: flex;
-  min-height: 100vh; /* Full viewport height */
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #e8f5e8;
+  overflow: hidden;
 }
 
-.authen-template__form {
-  flex: 1; /* Takes up available space */
+/* FORM BÊN TRÁI - 30% MÀN HÌNH */
+.authen-template__form{
+  width: 50%;
+  max-height: 100%;
+  background-color: #e8f5e8;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+}
+.authen-template__image{
+  width: 50%;
+  height: 100%;
+  background-image: url('https://familyhospital.vn/wp-content/uploads/2023/07/quyet_tam_cai_thuoc_la.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.authen-template__image {
-  flex: 1; /* Takes up available space */
-  background-color: #f0f0f0; /* Placeholder background */
-  /* Add background image or other styling as needed */
+/* CSS cho ảnh bên phải nếu có */
+.authen-desktop-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  min-height: 400px;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .authen-template {
-    flex-direction: column;
-  }
+.authen-desktop-image:hover {
+  transform: scale(1.02);
+}
 
-  .authen-template__image {
-    /* Adjust styles for smaller screens if needed */
-    min-height: 200px; /* Give image area some height on small screens */
+/* ĐẢM BẢO LAYOUT CỐ ĐỊNH CHO MÀN HÌNH LỚN */
+@media (min-width: 1200px) {
+  .authen-template-desktop__form {
+    min-width: 450px;
+    max-width: 550px;
+    padding: 80px 50px;
   }
-} 
+  
+  .authen-template-desktop__image {
+    padding: 100px 80px;
+  }
+  
+  .authen-desktop-image {
+    max-width: 900px;
+    max-height: 700px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .authen-template-desktop__form {
+    min-width: 500px;
+    max-width: 600px;
+  }
+  
+  .authen-desktop-image {
+    max-width: 1000px;
+    max-height: 750px;
+  }
+}
+
+/* CHỈ ẨN RESPONSIVE CHO MÀN HÌNH NHỎ */
+@media (max-width: 1023px) {
+  .authen-template-desktop {
+    display: none;
+  }
+}

@@ -49,9 +49,10 @@
 
 .nav a {
   text-decoration: none;
-  color: #333;
+  color: black;
   font-weight: 500;
   transition: color 0.3s;
+  font-size: 20px; /* Increased font size */
 }
 
 .nav a:hover {

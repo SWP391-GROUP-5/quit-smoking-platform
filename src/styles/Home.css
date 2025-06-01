@@ -1,10 +1,10 @@
-/* General Styles */
+/* Kiểu chung */
 .home-page {
   font-family: 'Roboto', sans-serif;
 }
 
 .container {
-  max-width: 1200px;    /* hoặc 1280px, 1400px tùy ý */
+  max-width: 1200px;    
   margin: 0 auto;
   padding-left: 24px;
   padding-right: 24px;
@@ -13,11 +13,15 @@
 .section-title {
   text-align: center;
   margin-bottom: 40px;
+  color:white;
+  font-size: 60px;
+}
+.cau_chuyen{
+  font-size: 60px; 
   color: #333;
-  font-size: 32px;
 }
 
-/* Button Styles */
+/* Kiểu nút */
 .primary-btn {
   background-color: #4CAF50;
   color: white;
@@ -51,7 +55,7 @@
   color: white;
 }
 
-/* Hero Section */
+/* Phần Hero */
 .hero {
   padding: 80px 0;
   background-color: #f9f9f9;
@@ -89,28 +93,28 @@
 
 .hero-image {
   flex: 1;
-  /* Allow flex item to shrink */
+  /* Cho phép mục flex co lại */
   min-width: 0;
 }
 
-/* Style for react-slick slider container */
+/* Kiểu cho vùng chứa slider react-slick */
 .hero-image .slick-slider {
-  width: 100%; /* Ensure slider takes full width of its container */
+  width: 100%; /* Đảm bảo slider chiếm toàn bộ chiều rộng của vùng chứa */
 }
 
-/* Container for each image in the carousel */
+/* Vùng chứa cho mỗi ảnh trong carousel */
 .hero-image .carousel-image-container {
-  height: 400px; /* Set a fixed height for the image container */
+  height: 400px; /* Đặt chiều cao cố định cho vùng chứa ảnh */
   display: flex;
   justify-content: center;
-  align-items: center; /* Center image vertically if needed */
+  align-items: center; /* Căn giữa ảnh theo chiều dọc nếu cần */
 }
 
-/* Style for individual images within the carousel container */
+/* Kiểu cho các ảnh riêng lẻ trong vùng chứa carousel */
 .hero-image .carousel-image-container img {
-  width: 100%; /* Make image take full width of its container */
-  height: 100%; /* Make image take full height of its container */
-  object-fit: cover; /* Crop image to cover the container while maintaining aspect ratio */
+  width: 100%; /* Làm cho ảnh chiếm toàn bộ chiều rộng của vùng chứa */
+  height: 100%; /* Làm cho ảnh chiếm toàn bộ chiều cao của vùng chứa */
+  object-fit: cover; /* Cắt ảnh để bao phủ vùng chứa trong khi vẫn giữ tỷ lệ khung hình */
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   background: #e0e0e0;
@@ -123,15 +127,15 @@
   border-radius: 10px;
 }
 
-/* Features Section */
+/* Phần Tính năng */
 .features {
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 20px;
 }
 
 .feature-card {
@@ -155,15 +159,15 @@
 .feature-card h3 {
   font-size: 20px;
   margin-bottom: 15px;
-  color: #333;
+  color: black;
 }
 
 .feature-card p {
-  color: #666;
+  color: black;
   line-height: 1.6;
 }
 
-/* Testimonials Section */
+/* Phần Lời chứng thực */
 .testimonials {
   padding: 80px 0;
   background-color: #f9f9f9;
@@ -181,8 +185,7 @@
 .testimonial-content p {
   font-size: 18px;
   line-height: 1.6;
-  color: #333;
-  font-style: italic;
+  color: black;
   margin-bottom: 20px;
 }
 
@@ -193,10 +196,10 @@
 }
 
 .testimonial-author p {
-  color: #666;
+  color:black;
 }
 
-/* Statistics Section */
+/* Phần Thống kê */
 .statistics {
   padding: 60px 0;
   background-color: #4CAF50;
@@ -220,7 +223,7 @@
   opacity: 0.9;
 }
 
-/* Blog Preview Section */
+/* Phần Xem trước Blog */
 .blog-preview {
   padding: 80px 0;
 }
@@ -278,7 +281,7 @@
   border-bottom: 2px solid #4CAF50;
 }
 
-/* CTA Section */
+/* Phần CTA */
 .cta-section {
   padding: 80px 0;
   background-color: #333;
@@ -299,7 +302,7 @@
   margin-right: auto;
 }
 
-/* Responsive Styles */
+/* Kiểu phản hồi */
 @media (max-width: 768px) {
   .hero .container {
     flex-direction: column;

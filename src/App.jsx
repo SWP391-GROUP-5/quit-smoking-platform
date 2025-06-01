@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/authen-button/Navbar'
 import Footer from './components/authen-button/Footer'
 import Home from './pages/home'
@@ -21,27 +21,27 @@ function ScrollToTop() {
 }
 
 function App() {
+  const location = useLocation();
+
   return (
-    <Router>
-      <div className="app">
-        <Navbar />
-        <ScrollToTop />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/quit-plan" element={<QuitPlan />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/feedback" element={<Feedback />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/blog" element={<Blog />} />
-            {/* Additional routes would be added here */}
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <div className="app">
+      <Navbar />
+      <ScrollToTop />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/quit-plan" element={<QuitPlan />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/feedback" element={<Feedback />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/blog" element={<Blog />} />
+          {/* Additional routes would be added here */}
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   )
 }
 

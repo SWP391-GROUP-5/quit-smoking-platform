@@ -1,17 +1,26 @@
 import React from "react";
-import "./index.css";
 import LoginForm from "../authen-form/LoginForm";
 import RegisterForm from "../authen-form/RegisterForm";
+import "./index.css";
 
-function AuthenTemplate({ isLogin }) {
+const AuthenTemplate = ({ isLogin = true }) => {
   return (
-    <div className="authen-template">
-      <div className="authen-template__form">
+    <div className="authen-template-desktop">
+      {/* FORM BÊN TRÁI (30%) */}
+      <div className="authen-template-desktop__form">
         {isLogin ? <LoginForm /> : <RegisterForm />}
       </div>
-      <div className="authen-template__image"></div>
+
+      {/* ẢNH BÊN PHẢI (70%) */}
+      <div className="authen-template-desktop__image">
+        <img
+        src="/login/gattan.jpg"
+          alt="Hình ảnh minh họa về việc bỏ thuốc lá"
+          className="authen-desktop-image"
+        />
+      </div>
     </div>
   );
-}
+};
 
-export default AuthenTemplate; 
+export default AuthenTemplate;
