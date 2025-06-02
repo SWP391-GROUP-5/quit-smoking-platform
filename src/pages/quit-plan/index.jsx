@@ -146,8 +146,15 @@ const QuitPlan = () => {
               <label>Bạn hút bao nhiêu điếu thuốc mỗi ngày?</label>
               <input 
                 type="number" 
-                value={formData.currentHabits.cigarettesPerDay} 
-                onChange={(e) => handleChange('currentHabits', 'cigarettesPerDay', parseInt(e.target.value) || 0)} 
+                value={formData.currentHabits.cigarettesPerDay === 0 ? '' : formData.currentHabits.cigarettesPerDay}
+                onChange={e => {
+                  let val = e.target.value;
+                  // Loại bỏ số 0 ở đầu nếu có nhiều hơn 1 ký tự
+                  if (val.length > 1 && val.startsWith('0')) {
+                    val = val.replace(/^0+/, '');
+                  }
+                  handleChange('currentHabits', 'cigarettesPerDay', val === '' ? 0 : parseInt(val));
+                }}
               />
             </div>
             
@@ -155,8 +162,14 @@ const QuitPlan = () => {
               <label>Bạn đã hút thuốc bao nhiêu năm?</label>
               <input 
                 type="number" 
-                value={formData.currentHabits.yearsSmoking} 
-                onChange={(e) => handleChange('currentHabits', 'yearsSmoking', parseInt(e.target.value) || 0)} 
+                value={formData.currentHabits.yearsSmoking === 0 ? '' : formData.currentHabits.yearsSmoking}
+                onChange={e => {
+                  let val = e.target.value;
+                  if (val.length > 1 && val.startsWith('0')) {
+                    val = val.replace(/^0+/, '');
+                  }
+                  handleChange('currentHabits', 'yearsSmoking', val === '' ? 0 : parseInt(val));
+                }}
               />
             </div>
             
@@ -164,8 +177,14 @@ const QuitPlan = () => {
               <label>Một bao thuốc lá có giá bao nhiêu?</label>
               <input 
                 type="number" 
-                value={formData.currentHabits.costPerPack} 
-                onChange={(e) => handleChange('currentHabits', 'costPerPack', parseFloat(e.target.value) || 0)} 
+                value={formData.currentHabits.costPerPack === 0 ? '' : formData.currentHabits.costPerPack}
+                onChange={e => {
+                  let val = e.target.value;
+                  if (val.length > 1 && val.startsWith('0')) {
+                    val = val.replace(/^0+/, '');
+                  }
+                  handleChange('currentHabits', 'costPerPack', val === '' ? 0 : parseFloat(val));
+                }}
               />
             </div>
             
@@ -304,8 +323,14 @@ const QuitPlan = () => {
                   <label>Số lần thử bỏ thuốc:</label>
                   <input 
                     type="number" 
-                    value={formData.previousAttempts.numberOfAttempts} 
-                    onChange={(e) => handleChange('previousAttempts', 'numberOfAttempts', parseInt(e.target.value) || 0)} 
+                    value={formData.previousAttempts.numberOfAttempts === 0 ? '' : formData.previousAttempts.numberOfAttempts}
+                    onChange={e => {
+                      let val = e.target.value;
+                      if (val.length > 1 && val.startsWith('0')) {
+                        val = val.replace(/^0+/, '');
+                      }
+                      handleChange('previousAttempts', 'numberOfAttempts', val === '' ? 0 : parseInt(val));
+                    }} 
                   />
                 </div>
                 
@@ -755,7 +780,7 @@ const QuitPlan = () => {
           {step < 5 && (
             <div className="form-navigation">
               {step > 1 && (
-                <button className="secondary-btn" onClick={prevStep}>
+                <button className="secondaryy-btn" onClick={prevStep}>
                   Quay Lại
                 </button>
               )}
@@ -773,4 +798,4 @@ const QuitPlan = () => {
   );
 };
 
-export default QuitPlan; 
+export default QuitPlan;
