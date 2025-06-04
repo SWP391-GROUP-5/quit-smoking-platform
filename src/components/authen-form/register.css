@@ -1,34 +1,12 @@
-h1 {
-  font-size: 30px;
-  font-weight: 600;
-  color: gray;
-  margin-bottom: 0px;
-  text-align: center;
-}
-.register-form {
+.register-form{
   width: 100%;
-  padding: 0px 20px;
-  display: flex;
-  flex-direction: column;
+  padding: 0px 30px;
 }
-
-.checkbox-group label {
-  margin-bottom: 0;
-}
-
-.align-left-item .ant-form-item-control-input-content {
-  text-align: left;
-}
-
-.align-left-item.ant-form-item .ant-form-item-control {
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-.register-title {
+h1{
+  font-size: 50px;
   text-align: center;
-  color: black;
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 25px;
+  color: gray;
+}
+.align-left-item{
+  text-align: left;
 }

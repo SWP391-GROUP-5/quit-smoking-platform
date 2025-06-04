@@ -23,8 +23,8 @@ function LoginForm() {
   };
 
   return (
-    <div >
-      <h1 className="a">Đăng nhập</h1>
+    <div className="login-form" >
+      <h1 >Đăng nhập</h1>
       <Form
         name="basic"
         layout="vertical"
