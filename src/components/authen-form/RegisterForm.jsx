@@ -20,7 +20,7 @@ function RegisterForm() {
   };
   return (
     <div className="register-form">
-      <h1 className="register-title">Đăng ký</h1>
+      <h1 >Đăng ký</h1>
       <Form
         name="basic"
         layout="vertical"
