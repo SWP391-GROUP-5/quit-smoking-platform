@@ -91,22 +91,38 @@ const Home = () => {
         <div className="container">
           <h2 className="section-title">Chúng Tôi Giúp Bạn Bỏ Thuốc Như Thế Nào</h2>
           <div className="features-grid">
-            <div className="feature-card">
+            <div
+              className="feature-card"
+              style={{ cursor: 'pointer' }}
+              onClick={() => navigate('/dashboard')}
+            >
               <div className="feature-icon">📊</div>
               <h3>Theo Dõi Tiến Độ</h3>
               <p>Giám sát số điếu thuốc tránh được, tiền tiết kiệm và cải thiện sức khỏe theo thời gian thực.</p>
             </div>
-            <div className="feature-card">
+            <div
+              className="feature-card"
+              style={{ cursor: 'pointer' }}
+              onClick={() => navigate('/quit-plan')}
+            >
               <div className="feature-icon">📝</div>
               <h3>Kế Hoạch Cá Nhân</h3>
               <p>Nhận kế hoạch bỏ thuốc được tùy chỉnh dựa trên thói quen và sở thích của bạn.</p>
             </div>
-            <div className="feature-card">
+            <div
+              className="feature-card"
+              style={{ cursor: 'pointer' }}
+              onClick={() => navigate('/blog')}
+            >
               <div className="feature-icon">👥</div>
               <h3>Hỗ Trợ Cộng Đồng</h3>
               <p>Kết nối với những người khác trên cùng hành trình để chia sẻ kinh nghiệm và động lực.</p>
             </div>
-            <div className="feature-card">
+            <div
+              className="feature-card"
+              style={{ cursor: 'pointer' }}
+              onClick={() => navigate('/blog')}
+            >
               <div className="feature-icon">🏆</div>
               <h3>Hệ Thống Thành Tựu</h3>
               <p>Nhận huy hiệu và phần thưởng khi đạt được các cột mốc quan trọng trong hành trình.</p>
@@ -118,15 +134,15 @@ const Home = () => {
       {/* Testimonials Section */}
       <section className="testimonials">
         <div className="container">
-          <h2 className="cau_chuyen">Câu Chuyện Thành Công</h2>
+          <h2 className="cau_chuyen">Bài học từ câu chuyện hút thuốc lá của Bác</h2>
           <div className="testimonials-slider">
             <div className="testimonial-card">
               <div className="testimonial-content">
-                <p>"Sau 15 năm hút thuốc, tôi không nghĩ mình có thể bỏ được. Nền tảng này đã giúp tôi làm được điều đó với những lời nhắc nhở hàng ngày và cộng đồng hỗ trợ."</p>
+                <p>"Quyết tâm một, kế hoạch mười, thì biện pháp phải hai mươi, có như vậy mới thực hiện được và bỏ hút thuốc cũng vậy. "</p>
               </div>
               <div className="testimonial-author">
-                <h4>Nguyễn Văn A</h4>
-                <p>Đã bỏ thuốc 2 năm</p>
+                <h4>Hồ Chí Minh</h4>
+                <p>Vị Lãnh Tụ Vĩ Đại của Đất Nước</p>
               </div>
             </div>
             {/* More testimonials would be added here in a real slider */}
@@ -193,7 +209,7 @@ const Home = () => {
         <div className="container">
           <h2>Sẵn Sàng Bắt Đầu Hành Trình Không Khói Thuốc?</h2>
           <p>Tham gia cộng đồng của chúng tôi và nhận được tất cả công cụ bạn cần để bỏ thuốc thành công.</p>
-          <button className="primary-btn">Đăng Ký Ngay</button>
+          <button className="primary-btn" onClick={() => navigate('/register')}>Đăng Ký Ngay</button>
         </div>
       </section>
     </div>
